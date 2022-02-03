@@ -1,0 +1,70 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+1. Дан размер файла в байтах. Найти количество полных килобайтов, которые занимает данный файл
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  double sizeB;
+
+  cout << "Enter file size: ";
+  cin >> sizeB;
+
+  double sizeKB = (sizeB/1024);
+  cout << "File size in Kb: " << sizeKB;
+2. Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти количество отрезков B, размещенных на отрезке A.
+#include <iostream>
+using namespace std;
+
+int main() {
+  int A, B;
+  cout << "Enter A: ";
+  cin >> A;
+
+  cout << "Enter B: ";
+  cin >> B;
+  cout << A / B << endl;
+  
+} 
+3. Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Найти длину незанятой части отрезка A.
+#include <iostream>
+using namespace std;
+
+int main() {
+  int A, B;
+  cout << "Enter A: ";
+  cin >> A;
+
+  cout << "Enter B: ";
+  cin >> B;
+
+  cout << A % B << endl;
+  
+} 
+4. Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа.
+#include <iostream>
+using namespace std;
+
+int main() {
+ int digit;
+ cout << "Enter digit: ";
+ cin >> digit;
+
+ int newDigit = digit/10 + digit%10*10;
+
+ cout << "New digit: " << newDigit << endl;
+} 
+Дано трехзначное число. В нем зачеркнули первую слева цифру и приписали ее справа. Вывести полученное число.
+#include <iostream>
+using namespace std;
+
+int main() {
+ int digit;
+ cout << "Enter digit: ";
+ cin >> digit;
+
+ int newDigit = digit%100*10 + digit/100;
+
+ cout << "New digit: " << newDigit << endl;
+} 
